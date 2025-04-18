@@ -5,7 +5,7 @@
 //  Created by 李泽宇 on 2025-04-18.
 //
 
-
+import SwiftUI
 import Foundation
 
 @Observable
@@ -26,3 +26,4 @@ class LaundryViewModel {
         bookings.append(newBooking)
     }
 }
+

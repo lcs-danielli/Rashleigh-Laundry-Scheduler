@@ -13,6 +13,8 @@
 		65D1A5862DB2C5D500967844 /* LaundrySchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5812DB2C5D500967844 /* LaundrySchedulerApp.swift */; };
 		65D1A5892DB2C5EA00967844 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5882DB2C5E700967844 /* Supabase.swift */; };
 		65D1A58C2DB2C62200967844 /* LaundryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A58B2DB2C61800967844 /* LaundryItem.swift */; };
+		65D1A5902DB2D55D00967844 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A58F2DB2D55900967844 /* ScheduleView.swift */; };
+		65D1A5922DB2D56400967844 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5912DB2D56000967844 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		65D1A5812DB2C5D500967844 /* LaundrySchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundrySchedulerApp.swift; sourceTree = "<group>"; };
 		65D1A5882DB2C5E700967844 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		65D1A58B2DB2C61800967844 /* LaundryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryItem.swift; sourceTree = "<group>"; };
+		65D1A58F2DB2D55900967844 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		65D1A5912DB2D56000967844 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		65D1A58D2DB2C64500967844 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65D1A5912DB2D56000967844 /* HistoryView.swift */,
+				65D1A58F2DB2D55900967844 /* ScheduleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D1A5902DB2D55D00967844 /* ScheduleView.swift in Sources */,
+				65D1A5922DB2D56400967844 /* HistoryView.swift in Sources */,
 				65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */,
 				65D1A5892DB2C5EA00967844 /* Supabase.swift in Sources */,
 				65D1A58C2DB2C62200967844 /* LaundryItem.swift in Sources */,
