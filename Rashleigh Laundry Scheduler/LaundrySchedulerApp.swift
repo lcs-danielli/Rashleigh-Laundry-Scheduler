@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct LaundrySchedulerApp: App {
+    @State var viewModel = LaundryViewModel()
+
     var body: some Scene {
         WindowGroup {
-            LaundryViewModel()
+            NavigationStack {
+                ScheduleView()
+                    .environment(viewModel)
+            }
         }
     }
 }
+

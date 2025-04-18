@@ -11,7 +11,8 @@ struct ScheduleView: View {
     @Environment(LaundryViewModel.self) var viewModel
     
     var body: some View {
-            NavigationStack {
+        NavigationStack {
+            Group {
                 if viewModel.bookings.isEmpty {
                     ContentUnavailableView(
                         "No Laundry Scheduled",
@@ -33,8 +34,9 @@ struct ScheduleView: View {
                     .listStyle(.plain)
                 }
             }
-            .navigationTitle("Schedule")
+            .navigationTitle("Scedule")
         }
+    }
 }
 
 #Preview {
