@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		65D1A5832DB2C5D500967844 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */; };
+		65D1A5842DB2C5D500967844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1A57F2DB2C5D500967844 /* Assets.xcassets */; };
+		65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5802DB2C5D500967844 /* LaundryViewModel.swift */; };
+		65D1A5862DB2C5D500967844 /* LaundrySchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5812DB2C5D500967844 /* LaundrySchedulerApp.swift */; };
+		65D1A5892DB2C5EA00967844 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5882DB2C5E700967844 /* Supabase.swift */; };
+		65D1A58C2DB2C62200967844 /* LaundryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A58B2DB2C61800967844 /* LaundryItem.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		65D1A56C2DB2C58A00967844 /* Rashleigh Laundry Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rashleigh Laundry Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		65D1A57F2DB2C5D500967844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65D1A5802DB2C5D500967844 /* LaundryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryViewModel.swift; sourceTree = "<group>"; };
+		65D1A5812DB2C5D500967844 /* LaundrySchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundrySchedulerApp.swift; sourceTree = "<group>"; };
+		65D1A5882DB2C5E700967844 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		65D1A58B2DB2C61800967844 /* LaundryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		65D1A56E2DB2C58A00967844 /* Rashleigh Laundry Scheduler */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Rashleigh Laundry Scheduler";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		65D1A5692DB2C58A00967844 /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		65D1A5632DB2C58A00967844 = {
 			isa = PBXGroup;
 			children = (
-				65D1A56E2DB2C58A00967844 /* Rashleigh Laundry Scheduler */,
+				65D1A5822DB2C5D500967844 /* Rashleigh Laundry Scheduler */,
 				65D1A56D2DB2C58A00967844 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,59 @@
 				65D1A56C2DB2C58A00967844 /* Rashleigh Laundry Scheduler.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		65D1A57E2DB2C5D500967844 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		65D1A5822DB2C5D500967844 /* Rashleigh Laundry Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				65D1A5812DB2C5D500967844 /* LaundrySchedulerApp.swift */,
+				65D1A5872DB2C5E000967844 /* Helpers */,
+				65D1A58A2DB2C5FE00967844 /* Model */,
+				65D1A58D2DB2C64500967844 /* Views */,
+				65D1A58E2DB2C65A00967844 /* ViewModel */,
+				65D1A57E2DB2C5D500967844 /* Preview Content */,
+				65D1A57F2DB2C5D500967844 /* Assets.xcassets */,
+			);
+			path = "Rashleigh Laundry Scheduler";
+			sourceTree = "<group>";
+		};
+		65D1A5872DB2C5E000967844 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65D1A5882DB2C5E700967844 /* Supabase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		65D1A58A2DB2C5FE00967844 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65D1A58B2DB2C61800967844 /* LaundryItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65D1A58D2DB2C64500967844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65D1A58E2DB2C65A00967844 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				65D1A5802DB2C5D500967844 /* LaundryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +119,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				65D1A56E2DB2C58A00967844 /* Rashleigh Laundry Scheduler */,
 			);
 			name = "Rashleigh Laundry Scheduler";
 			packageProductDependencies = (
@@ -109,6 +166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D1A5832DB2C5D500967844 /* Preview Assets.xcassets in Resources */,
+				65D1A5842DB2C5D500967844 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */,
+				65D1A5892DB2C5EA00967844 /* Supabase.swift in Sources */,
+				65D1A58C2DB2C62200967844 /* LaundryItem.swift in Sources */,
+				65D1A5862DB2C5D500967844 /* LaundrySchedulerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

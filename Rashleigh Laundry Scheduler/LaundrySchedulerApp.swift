@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Rashleigh_Laundry_SchedulerApp: App {
+struct LaundrySchedulerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaundryViewModel()
         }
     }
 }
