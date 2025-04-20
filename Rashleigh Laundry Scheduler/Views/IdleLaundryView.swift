@@ -8,15 +8,16 @@
 
 import SwiftUI
 
-struct IdleMachineView: View {
+struct IdleLaundryView: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 18) {
+            VStack() {
                 
                 Spacer()
                 
                 Text("Idle...")
                     .font(.largeTitle)
+                    .padding()
                 
                 Text("The machine now is avaliable")
                     .font(.subheadline)
@@ -45,6 +46,6 @@ struct IdleMachineView: View {
 }
 
 #Preview {
-    IdleMachineView()
+    IdleLaundryView()
 }
 
