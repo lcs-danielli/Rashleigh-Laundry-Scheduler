@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65AF0F002DB49D850069C1CE /* IdleLaundryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF0EFF2DB49D770069C1CE /* IdleLaundryView.swift */; };
+		65AF0F022DB4A2B20069C1CE /* OccupiedLaundryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF0F012DB4A2AB0069C1CE /* OccupiedLaundryView.swift */; };
 		65D1A5832DB2C5D500967844 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */; };
 		65D1A5842DB2C5D500967844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1A57F2DB2C5D500967844 /* Assets.xcassets */; };
 		65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5802DB2C5D500967844 /* LaundryViewModel.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65AF0EFF2DB49D770069C1CE /* IdleLaundryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleLaundryView.swift; sourceTree = "<group>"; };
+		65AF0F012DB4A2AB0069C1CE /* OccupiedLaundryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupiedLaundryView.swift; sourceTree = "<group>"; };
 		65D1A56C2DB2C58A00967844 /* Rashleigh Laundry Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rashleigh Laundry Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65D1A57F2DB2C5D500967844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		65D1A58D2DB2C64500967844 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65AF0EFF2DB49D770069C1CE /* IdleLaundryView.swift */,
+				65AF0F012DB4A2AB0069C1CE /* OccupiedLaundryView.swift */,
 				65D1A5912DB2D56000967844 /* HistoryView.swift */,
 				65D1A58F2DB2D55900967844 /* ScheduleView.swift */,
 			);
@@ -186,8 +192,10 @@
 			files = (
 				65D1A5902DB2D55D00967844 /* ScheduleView.swift in Sources */,
 				65D1A5922DB2D56400967844 /* HistoryView.swift in Sources */,
+				65AF0F022DB4A2B20069C1CE /* OccupiedLaundryView.swift in Sources */,
 				65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */,
 				65D1A5892DB2C5EA00967844 /* Supabase.swift in Sources */,
+				65AF0F002DB49D850069C1CE /* IdleLaundryView.swift in Sources */,
 				65D1A58C2DB2C62200967844 /* LaundryItem.swift in Sources */,
 				65D1A5862DB2C5D500967844 /* LaundrySchedulerApp.swift in Sources */,
 			);
