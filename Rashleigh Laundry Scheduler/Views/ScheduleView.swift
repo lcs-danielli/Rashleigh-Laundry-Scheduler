@@ -34,7 +34,7 @@ struct ScheduleView: View {
                     .listStyle(.plain)
                 }
             }
-            .navigationTitle("Scedule")
+            .navigationTitle("Schedule")
         }
     }
 }

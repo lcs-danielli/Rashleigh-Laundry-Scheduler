@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Booking: Identifiable {
+struct Information: Identifiable {
     let id = UUID()
     let date: String
     let userID: String
@@ -15,16 +15,30 @@ struct Booking: Identifiable {
     let endTime: String
 }
 
-let exampleBook1 = Booking(
+let exampleBook1 = Information(
     date: "Sunday",
     userID: "lucuszhu@lcs.on.ca",
     startTime: "13:00",
     endTime: "15:00"
 )
 
-let exampleBook2 = Booking(
+let exampleBook2 = Information(
     date: "Monday",
     userID: "DavidShan@lcs.on.ca",
     startTime: "18:00",
     endTime: "20:00"
+)
+
+let exampleHistory1 = Information(
+    date: "Wednsday",
+    userID: "Irisxu@lcs.on.ca",
+    startTime: "15:00",
+    endTime: "18:00"
+)
+
+let exampleHistory2 = Information(
+    date: "Thursday",
+    userID: "JacobZhan@lcs.on.ca",
+    startTime: "22:00",
+    endTime: "22:30"
 )

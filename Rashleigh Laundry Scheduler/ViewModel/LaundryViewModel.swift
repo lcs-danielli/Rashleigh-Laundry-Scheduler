@@ -11,13 +11,13 @@ import Foundation
 @Observable
 
 class LaundryViewModel {
-    var bookings: [Booking] = [
+    var bookings: [Information] = [
         exampleBook1,
         exampleBook2
     ]
     
     func addBooking(date: String, user: String, start: String, end: String) {
-        let newBooking = Booking(
+        let newBooking = Information(
                 date: date,
                 userID: user,
                 startTime: start,
@@ -25,5 +25,11 @@ class LaundryViewModel {
         )
         bookings.append(newBooking)
     }
+    
+    var histories: [Information] = [
+        exampleHistory1,
+        exampleHistory2
+    ]
+    
 }
 
