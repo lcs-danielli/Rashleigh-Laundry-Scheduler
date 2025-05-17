@@ -20,21 +20,38 @@ struct ScheduleView: View {
                         description: Text("Make one booking!")
                     )
                 } else {
-                    List(viewModel.bookings) { currentBooking in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(currentBooking.date)
-                                .font(.headline)
-                            Text("\(currentBooking.userID)  \(currentBooking.startTime)–\(currentBooking.endTime)")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            //Chat GPT help the format of the text
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 12) {
+                            ForEach(viewModel.bookings) { booking in
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(booking.date)
+                                        .font(.headline)
+                                    Text("\(booking.userID)  \(booking.startTime)–\(booking.endTime)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                }
+                                .padding(.vertical, 8)
+                            }
+                            NavigationLink(destination:
+                                            BookingView()
+                                .environment(viewModel)
+                            ) {
+                                Text("New Booking")
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.green.opacity(0.8))
+                                    .foregroundColor(.white)
+                                    .cornerRadius(22)
+                            }
+                            .padding(.top, 460)
                         }
-                        .padding(.vertical, 4)
+                        .listStyle(.plain)
+                        .padding()
                     }
-                    .listStyle(.plain)
                 }
             }
             .navigationTitle("Schedule")
+            .background(Color.blue.opacity(0.04))
         }
     }
 }
