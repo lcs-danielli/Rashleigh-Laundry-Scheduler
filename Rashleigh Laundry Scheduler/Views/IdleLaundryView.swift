@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct IdleLaundryView: View {
+    @Environment(LaundryViewModel.self) var viewModel
+    
     var body: some View {
         NavigationStack {
             VStack() {
@@ -25,16 +27,16 @@ struct IdleLaundryView: View {
                 
                 Spacer()
                 
-                Button {
-                    // function
-                } label: {
+                NavigationLink(destination: BookingView()
+                                .environment(viewModel)) {
                     Text("Book Now")
                         .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.green.opacity(0.8))
+                        .foregroundColor(.white)
+                        .cornerRadius(22)
                 }
-                .padding()
-                .background(Color.green.opacity(0.8))
-                .foregroundColor(.white)
-                .cornerRadius(22)
+
             }
             .shadow(radius: 5)
             .padding()
@@ -45,7 +47,12 @@ struct IdleLaundryView: View {
     }
 }
 
+
 #Preview {
-    IdleLaundryView()
+    NavigationStack {
+        IdleLaundryView()
+            .environment(LaundryViewModel())
+    }
 }
+
 
