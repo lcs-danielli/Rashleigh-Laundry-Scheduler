@@ -29,8 +29,10 @@ struct ScheduleView: View {
                                     Text("\(booking.userID)  \(booking.startTime)–\(booking.endTime)")
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
+                                    //Chat GPT help the format of the text
                                 }
                                 .padding(.vertical, 8)
+                                Divider()
                             }
                             NavigationLink(destination:
                                             BookingView()
@@ -45,7 +47,6 @@ struct ScheduleView: View {
                             }
                             .padding(.top, 460)
                         }
-                        .listStyle(.plain)
                         .padding()
                     }
                 }

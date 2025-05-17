@@ -9,36 +9,87 @@ import SwiftUI
 
 struct HistoryView: View {
     @Environment(LaundryViewModel.self) var viewModel
-    
+
     var body: some View {
         NavigationStack {
             Group {
                 if viewModel.histories.isEmpty {
                     ContentUnavailableView(
                         "No History",
-                        systemImage: "heart.slash"
+                        systemImage: "clock.arrow.circlepath",
+                        description: Text("No Laundry History")
                     )
                 } else {
-                    List(viewModel.histories) { currentHistory in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(currentHistory.date)
-                                .font(.headline)
-                            Text("\(currentHistory.userID)  \(currentHistory.startTime)–\(currentHistory.endTime)")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            //Chat GPT help the format of the text
+                    ScrollView {
+                        VStack(alignment: .leading) {
+                            ForEach(viewModel.histories) { history in
+                                VStack(alignment: .leading) {
+                                    Text(history.date)
+                                        .font(.headline)
+                                    Text("\(history.userID)  \(history.startTime)–\(history.endTime)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                    //Chat GPT help the format of the text
+                                }
+                                .padding(.vertical, 8)
+                                Divider()
+                            }
                         }
-                        .padding(.vertical, 4)
+                        .padding()
                     }
-                    .listStyle(.plain)
                 }
             }
             .navigationTitle("History")
+            .background(Color.blue.opacity(0.04))
         }
     }
 }
 
 #Preview {
-    HistoryView()
-        .environment(LaundryViewModel())
+        HistoryView()
+            .environment(LaundryViewModel())
 }
+
+
+
+//import SwiftUI
+//
+//struct HistoryView: View {
+//    @Environment(LaundryViewModel.self) var viewModel
+//    
+//    var body: some View {
+//        NavigationStack {
+//            Group {
+//                if viewModel.histories.isEmpty {
+//                    ContentUnavailableView(
+//                        "No History",
+//                        systemImage: "heart.slash"
+//                    )
+//                } else {
+//                    ScrollView {
+//                        VStack(alignment: .leading, spacing: 12) {
+//                            ForEach(viewModel.histories) { history in
+//                                VStack(alignment: .leading, spacing: 4) {
+//                                    Text(history.date)
+//                                        .font(.headline)
+//                                    Text("\(history.userID)  \(history.startTime)–\(history.endTime)")
+//                                        .font(.subheadline)
+//                                        .foregroundColor(.secondary)
+//                                    //Chat GPT help the format of the text
+//                                }
+//                                .padding(.vertical, 4)
+//                            }
+//                            .listStyle(.plain)
+//                        }
+//                }
+//            }
+//            .background(Color.blue.opacity(0.04))
+//            .navigationTitle("History")
+//        }
+//    }
+//}
+//
+//#Preview {
+//    HistoryView()
+//        .environment(LaundryViewModel())
+//}
