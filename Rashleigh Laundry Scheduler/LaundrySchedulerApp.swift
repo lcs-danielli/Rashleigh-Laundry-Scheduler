@@ -8,16 +8,15 @@
 import SwiftUI
 
 @main
-struct LaundrySchedulerApp: App {
-    @State var viewModel = LaundryViewModel()
+struct Rashleigh_Laundry_SchedulerApp: App {
+    @StateObject var viewModel = LaundryViewModel()
 
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                ScheduleView()
-                    .environment(viewModel)
-            }
+            ScheduleView()
+                .environmentObject(viewModel)
         }
     }
 }
+
 

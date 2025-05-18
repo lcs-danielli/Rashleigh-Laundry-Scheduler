@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookingView: View {
-    @Environment(LaundryViewModel.self) var viewModel
+    @EnvironmentObject var viewModel: LaundryViewModel
     
     @State var date      = ""
     @State var userID    = ""
@@ -64,5 +64,4 @@ struct BookingView: View {
 
 #Preview {
     BookingView()
-        .environment(LaundryViewModel())
 }

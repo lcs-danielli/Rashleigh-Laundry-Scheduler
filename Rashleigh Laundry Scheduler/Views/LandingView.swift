@@ -63,5 +63,5 @@ struct LandingView: View {
 
 #Preview {
     LandingView()
-        .environment(LaundryViewModel())
+        .environmentObject(LaundryViewModel())
 }

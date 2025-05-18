@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @Environment(LaundryViewModel.self) var viewModel
+    @EnvironmentObject var viewModel: LaundryViewModel
 
     var body: some View {
         NavigationStack {
@@ -47,7 +47,7 @@ struct HistoryView: View {
 
 #Preview {
         HistoryView()
-            .environment(LaundryViewModel())
+        .environmentObject(LaundryViewModel())
 }
 
 

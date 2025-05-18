@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct IdleLaundryView: View {
-    @Environment(LaundryViewModel.self) var viewModel
+    @EnvironmentObject var viewModel: LaundryViewModel
     
     var body: some View {
         NavigationStack {
@@ -28,7 +28,7 @@ struct IdleLaundryView: View {
                 Spacer()
                 
                 NavigationLink(destination: BookingView()
-                                .environment(viewModel)) {
+                    .environmentObject(viewModel)) {
                     Text("Book Now")
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -51,7 +51,7 @@ struct IdleLaundryView: View {
 #Preview {
     NavigationStack {
         IdleLaundryView()
-            .environment(LaundryViewModel())
+            .environmentObject(LaundryViewModel())
     }
 }
 

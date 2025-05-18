@@ -16,25 +16,13 @@ func getDocumentsDirectory() -> URL {
 
 let bookingsFileLabel = "BookingsData.json"
 // Same format as Joke finder
+let historyFileLabel = "HistoryData.json"
 
-@Observable
-
-class LaundryViewModel {
-    var bookings: [Information] = [
-        exampleBook1,
-        exampleBook2
-    ]
+class LaundryViewModel: ObservableObject {
     
-    var histories: [Information] = [
-        exampleHistory1,
-        exampleHistory2
-    ]
+    @Published var bookings: [Information] = []
     
-    
-    init() {
-        // save booking
-        loadBookings()
-    }
+    @Published var histories: [Information] = []
     
     func addBooking(date: String, user: String, start: String, end: String) {
         let newBooking = Information(
@@ -44,15 +32,63 @@ class LaundryViewModel {
             endTime: end
         )
         bookings.append(newBooking)
+        persistBookings()
     }
     
-    //func deleteBooking
+    init() {
+        // save booking
+        loadBookings()
+        loadHistories()
+    }
     
+    func persistHistories() {
+        let filename = getDocumentsDirectory().appendingPathComponent(historyFileLabel)
+        print(filename)
+        print("Persisting histories to:")
+        
+        do {
+            // encoder created
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            
+            let data = try encoder.encode(self.histories)
+            
+            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print(error)
+            print("Error persisting bookings:")
+        }
+    }
+    
+    func loadHistories() {
+        
+        let filename = getDocumentsDirectory().appendingPathComponent(historyFileLabel)
+        
+        print("Loading histories from:")
+        print(filename)
+        
+        do {
+            let data = try Data(contentsOf: filename)
+            
+            print("Got data from file, contents are:")
+            print(String(data: data, encoding: .utf8)!)
+            
+            self.histories = try JSONDecoder().decode([Information].self, from: data)
+            
+        } catch {
+            
+            print(error)
+            print("Could not load histories:")
+            
+            self.histories = []
+        }
+    }
     
     // Same format as Joke persisting
     func persistBookings() {
         let filename = getDocumentsDirectory().appendingPathComponent(bookingsFileLabel)
-        print("Persisting bookings to:", filename)
+        print(filename)
+        print("Persisting bookings to:")
         
         do {
             // encoder created
@@ -73,7 +109,6 @@ class LaundryViewModel {
         }
     }
     
-    //  Load bookings from disk into the array (or start empty)
     func loadBookings() {
         
         let filename = getDocumentsDirectory().appendingPathComponent(bookingsFileLabel)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScheduleView: View {
-    @Environment(LaundryViewModel.self) var viewModel
+    @EnvironmentObject var viewModel: LaundryViewModel
     
     var body: some View {
         NavigationStack {
@@ -33,11 +33,16 @@ struct ScheduleView: View {
                                     
                                     //Chat GPt generate the delete button
                                     Button(role: .destructive) {
-                                        viewModel.bookings.removeAll { $0.id == booking.id }
-                                        viewModel.persistBookings()
+                                        if let index = viewModel.bookings.firstIndex(where: { $0.id == booking.id }) {
+                                            let removed = viewModel.bookings.remove(at: index)
+                                            viewModel.persistBookings()
+                                            viewModel.histories.insert(removed, at: 0)
+                                            viewModel.persistHistories()
+                                        }
                                     } label: {
                                         Text("Delete")
                                     }
+
                                     .buttonStyle(.borderless)
                                     .padding(.top, 4)
                                 }
@@ -54,7 +59,7 @@ struct ScheduleView: View {
             .background(Color.blue.opacity(0.04))
             NavigationLink(destination:
                             BookingView()
-                .environment(viewModel)
+                .environmentObject(viewModel)
             ) {
                 Text("New Booking")
                     .frame(maxWidth: .infinity)
@@ -71,5 +76,5 @@ struct ScheduleView: View {
 
 #Preview {
     ScheduleView()
-        .environment(LaundryViewModel())
+        .environmentObject(LaundryViewModel())
 }
