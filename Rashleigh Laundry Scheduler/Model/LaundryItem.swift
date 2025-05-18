@@ -8,7 +8,7 @@
 import Foundation
 
 struct Information: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     let date: String
     let userID: String
     let startTime: String
