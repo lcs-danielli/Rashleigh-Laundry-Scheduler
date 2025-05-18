@@ -9,6 +9,8 @@ import SwiftUI
 
 class LaundryViewModel: ObservableObject {
     
+    @Published var currentTip: LaundryTip?
+    
     @Published var bookings: [Information] = []
     
     @Published var histories: [Information] = []
@@ -28,6 +30,41 @@ class LaundryViewModel: ObservableObject {
         // save booking
         loadBookings()
         loadHistories()
+    }
+    
+    // Same idea of joke fetching
+    func fetchLaundryTip() async {
+        let endpoint = "https://api.adviceslip.com/advice"
+        guard let url = URL(string: endpoint) else {
+            print("Invalid address for JSON endpoint.")
+            return
+        }
+        
+        // 2. Fetch the raw data from the URL
+        //
+        // Network requests can potentially fail (throw errors) so
+        // we complete them within a do-catch block to report errors
+        // if they occur.
+        //
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            
+            print("Got data from endpoint, contents of response are:")
+            print(String(data: data, encoding: .utf8)!)
+            
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode(LaundryTip.self, from: data)
+            
+            DispatchQueue.main.async {
+                self.currentTip = decodedData
+            }
+            
+        } catch {
+            print("Could not retrieve data from endpoint, or could not decode into an instance of a Swift data type.")
+            print("----")
+            print(error)
+        }
     }
     
     func persistHistories() {
