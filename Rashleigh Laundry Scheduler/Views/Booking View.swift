@@ -44,8 +44,14 @@ struct BookingView: View {
                     Text("Book")
                 }
                 .padding()
-                .disabled(!date.isEmpty || userID.isEmpty || startTime.isEmpty || endTime.isEmpty)
+                .disabled(
+                    date.isEmpty ||
+                    userID.isEmpty ||
+                    startTime.isEmpty ||
+                    endTime.isEmpty
+                )
                 .buttonStyle(.borderedProminent)
+
                 
                 Spacer()
             }

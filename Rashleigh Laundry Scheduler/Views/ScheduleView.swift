@@ -45,7 +45,7 @@ struct ScheduleView: View {
                                     .foregroundColor(.white)
                                     .cornerRadius(22)
                             }
-                            .padding(.top, 460)
+                            .padding(.top, 400)
                         }
                         .padding()
                     }
