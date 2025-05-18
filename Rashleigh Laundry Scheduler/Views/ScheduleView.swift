@@ -30,22 +30,21 @@ struct ScheduleView: View {
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
                                     //Chat GPT help the format of the text
+                                    
+                                    //Chat GPt generate the delete button
+                                    Button(role: .destructive) {
+                                        viewModel.bookings.removeAll { $0.id == booking.id }
+                                        viewModel.persistBookings()
+                                    } label: {
+                                        Text("Delete")
+                                    }
+                                    .buttonStyle(.borderless)
+                                    .padding(.top, 4)
                                 }
                                 .padding(.vertical, 8)
                                 Divider()
                             }
-                            NavigationLink(destination:
-                                            BookingView()
-                                .environment(viewModel)
-                            ) {
-                                Text("New Booking")
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color.green.opacity(0.8))
-                                    .foregroundColor(.white)
-                                    .cornerRadius(22)
-                            }
-                            .padding(.top, 400)
+                            
                         }
                         .padding()
                     }
@@ -53,7 +52,20 @@ struct ScheduleView: View {
             }
             .navigationTitle("Schedule")
             .background(Color.blue.opacity(0.04))
+            NavigationLink(destination:
+                            BookingView()
+                .environment(viewModel)
+            ) {
+                Text("New Booking")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.green.opacity(0.8))
+                    .foregroundColor(.white)
+                    .cornerRadius(22)
+            }
+            .padding(.top, 400)
         }
+        
     }
 }
 
