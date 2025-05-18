@@ -12,6 +12,7 @@
 		65AF0F052DB4AF620069C1CE /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF0F042DB4AF5F0069C1CE /* LandingView.swift */; };
 		65C5E9282DD922E3008EE494 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5E9272DD922DC008EE494 /* BookingView.swift */; };
 		65C5E92E2DDA6E7A008EE494 /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5E92D2DDA6E73008EE494 /* SharedFunctionsAndConstants.swift */; };
+		65C5E9322DDA703D008EE494 /* LaundryTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5E9312DDA7034008EE494 /* LaundryTip.swift */; };
 		65D1A5832DB2C5D500967844 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */; };
 		65D1A5842DB2C5D500967844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1A57F2DB2C5D500967844 /* Assets.xcassets */; };
 		65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1A5802DB2C5D500967844 /* LaundryViewModel.swift */; };
@@ -28,6 +29,7 @@
 		65AF0F042DB4AF5F0069C1CE /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		65C5E9272DD922DC008EE494 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		65C5E92D2DDA6E73008EE494 /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
+		65C5E9312DDA7034008EE494 /* LaundryTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTip.swift; sourceTree = "<group>"; };
 		65D1A56C2DB2C58A00967844 /* Rashleigh Laundry Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rashleigh Laundry Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1A57D2DB2C5D500967844 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65D1A57F2DB2C5D500967844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				65D1A58B2DB2C61800967844 /* LaundryItem.swift */,
+				65C5E9312DDA7034008EE494 /* LaundryTip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				65C5E9282DD922E3008EE494 /* BookingView.swift in Sources */,
 				65AF0F022DB4A2B20069C1CE /* OccupiedLaundryView.swift in Sources */,
 				65D1A5852DB2C5D500967844 /* LaundryViewModel.swift in Sources */,
+				65C5E9322DDA703D008EE494 /* LaundryTip.swift in Sources */,
 				65D1A5892DB2C5EA00967844 /* Supabase.swift in Sources */,
 				65AF0F002DB49D850069C1CE /* IdleLaundryView.swift in Sources */,
 				65D1A58C2DB2C62200967844 /* LaundryItem.swift in Sources */,
