@@ -12,7 +12,7 @@ struct LandingView: View {
     @State var currentTab = 2
     
     @State var occupacity = false
-
+    
     var body: some View {
         
         TabView(selection: $currentTab) {
@@ -33,17 +33,17 @@ struct LandingView: View {
                     OccupiedLaundryView()
                 } else {
                     IdleLaundryView()
-              }
-                       }
-                .tabItem {
-                    Label {
-                        Text("Occupacity")
-                    } icon: {
-                        Image(systemName: "gearshape.fill")
-                    }
-                    
                 }
-                .tag(2)
+            }
+            .tabItem {
+                Label {
+                    Text("Occupacity")
+                } icon: {
+                    Image(systemName: "gearshape.fill")
+                }
+                
+            }
+            .tag(2)
             
             HistoryView()
                 .tabItem {
@@ -59,7 +59,7 @@ struct LandingView: View {
         }
     }
 }
-        
+
 
 #Preview {
     LandingView()
