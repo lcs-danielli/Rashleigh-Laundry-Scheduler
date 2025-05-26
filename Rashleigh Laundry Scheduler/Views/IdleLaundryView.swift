@@ -27,6 +27,8 @@ struct IdleLaundryView: View {
                 
                 Spacer()
                 
+                LaundryTipView()
+                
                 NavigationLink(destination: BookingView()
                     .environmentObject(viewModel)) {
                     Text("Book Now")

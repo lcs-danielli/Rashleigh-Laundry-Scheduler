@@ -30,6 +30,8 @@ struct OccupiedLaundryView: View {
                 
                 Spacer()
                 
+                LaundryTipView()
+                
             }
             .shadow(radius: 5)
             .padding()
@@ -43,5 +45,6 @@ struct OccupiedLaundryView: View {
 
 #Preview {
     OccupiedLaundryView()
+        .environmentObject(LaundryViewModel())
 }
 

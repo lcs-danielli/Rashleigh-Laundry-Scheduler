@@ -27,14 +27,13 @@ struct LandingView: View {
                     
                 }
                 .tag(1)
-            
-            Group {
-                if occupacity {
-                    OccupiedLaundryView()
-                } else {
-                    IdleLaundryView()
+                Group {
+                    if occupacity {
+                        OccupiedLaundryView()
+                    } else {
+                        IdleLaundryView()
+                    }
                 }
-            }
             .tabItem {
                 Label {
                     Text("Occupacity")

@@ -32,6 +32,8 @@ struct ScheduleView: View {
                                     //Chat GPT help the format of the text
                                     
                                     //Chat GPt generate the delete button
+                                    //https://chatgpt.com/share/68337ca1-5910-8006-98b1-52b2bb009e41
+                                    
                                     Button(role: .destructive) {
                                         if let index = viewModel.bookings.firstIndex(where: { $0.id == booking.id }) {
                                             let removed = viewModel.bookings.remove(at: index)

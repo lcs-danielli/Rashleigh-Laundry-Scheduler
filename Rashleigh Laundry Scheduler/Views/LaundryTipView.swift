@@ -26,8 +26,8 @@ struct LaundryTipView: View {
             }
         }
         .padding()
-        .background(Color.green.opacity(0.1))
-        .cornerRadius(16)
+        .background(Color.blue.opacity(0.02))
+        .cornerRadius(20)
         // function of fetching the laundry tip
         .task {
             await viewModel.fetchLaundryTip()
